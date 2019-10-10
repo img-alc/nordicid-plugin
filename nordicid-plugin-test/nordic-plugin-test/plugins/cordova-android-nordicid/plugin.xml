@@ -22,7 +22,6 @@
         </config-file>
 
         <source-file src="src/android/NordicID.java" target-dir="src/com/img/NordicID" />
-		<source-file src="src/android/libs/NurApi.jar" target-dir="src/com/img/NordicID/libs/" />
-        <framework src="src/android/extras.gradle" custom="true" type="gradleReference"/>
+		<lib-file src="src/android/libs/NurApi.jar" />
     </platform>
 </plugin>

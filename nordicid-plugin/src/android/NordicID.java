@@ -1,8 +1,12 @@
 package NordicIDPlugin;
 
 import com.nordicid.nurapi.*;
-import org.apache.cordova.CordovaPlugin;
+
+import org.apache.cordova.*;
 import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaInterface;
+import org.apache.cordova.CordovaPlugin;
+import org.apache.cordova.CordovaWebView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,9 +31,9 @@ public class NordicID extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if ("setReadingStrength".equals(action)) {
-            setReadingStrength(args[0]);
+            setReadingStrength(args.getInt(0), callbackContext);
         } else if ("getReadingStrength".equals(action)) {
-            getReadingStrength();
+            getReadingStrength(callbackContext);
             return true;
         }
         return false;
@@ -45,7 +49,7 @@ public class NordicID extends CordovaPlugin {
                 callbackContext.error("Strength level must be between 0 and 19");
             }
         } catch (Exception e) {
-            callbackContext.error(e);
+            callbackContext.error(e.toString());
         }
     }
 
@@ -54,7 +58,7 @@ public class NordicID extends CordovaPlugin {
             int currentLevel = nurApi.getSetupTxLevel();
             callbackContext.success("Strength level: " + currentLevel);
         } catch (Exception e) {
-            callbackContext.error(e);
+            callbackContext.error(e.toString());
         }
     }
 }
