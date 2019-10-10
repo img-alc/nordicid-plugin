@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="NurApi">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/android/Libs/NurApi.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
