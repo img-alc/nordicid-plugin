@@ -6,5 +6,13 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-android-nordicid": {
+    "source": {
+      "type": "local",
+      "path": "D:\\Projects\\NordicId Plugin\\nordicid-plugin\\nordicid-plugin-test\\nordic-plugin-test\\node_modules\\cordova-android-nordicid"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

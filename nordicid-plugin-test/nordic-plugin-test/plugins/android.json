@@ -9,6 +9,9 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.img.nordictestplugin"
+    },
+    "cordova-android-nordicid": {
+      "PACKAGE_NAME": "com.img.nordictestplugin"
     }
   },
   "dependent_plugins": {}
