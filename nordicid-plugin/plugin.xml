@@ -22,6 +22,9 @@
         </config-file>
 
         <source-file src="src/android/NordicID.java" target-dir="src/com/img/NordicID" />
+        <source-file src="src/android/NurApiAutoConnectTransport.java" target-dir="src/com/img/NurApiAutoConnectTransport" />
+        <source-file src="src/android/NurApiSocketAutoConnect.java" target-dir="src/com/img/NurApiSocketAutoConnect" />
+        <source-file src="src/android/NurApiSocketTransport.java" target-dir="src/com/img/NurApiSocketTransport" />
 		<lib-file src="src/android/libs/NurApi.jar" />
     </platform>
 </plugin>

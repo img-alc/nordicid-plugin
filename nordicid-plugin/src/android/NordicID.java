@@ -1,7 +1,7 @@
 package NordicIDPlugin;
 
 import com.nordicid.nurapi.*;
-
+import android.content.Context;
 import org.apache.cordova.*;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
@@ -17,11 +17,15 @@ import org.json.JSONObject;
  */
 public class NordicID extends CordovaPlugin {
     private NurApi nurApi;
+    private NurApiSocketAutoConnect autoConnect;
+    private Context context;
 
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
         nurApi = new NurApi();
+        context = this.cordova.getActivity().getApplicationContext();
+        autoConnect = new NurApiSocketAutoConnect(context, nurApi);
     }
 
     @Override
@@ -31,15 +35,18 @@ public class NordicID extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if ("setReadingStrength".equals(action)) {
-            setReadingStrength(args.getInt(0), callbackContext);
+            setReadingStrength(callbackContext, args.getInt(0));
         } else if ("getReadingStrength".equals(action)) {
             getReadingStrength(callbackContext);
+            return true;
+        } else if ("connectViaTCP".equals(action)) {
+            connectViaTCP(callbackContext, args.getString(0));
             return true;
         }
         return false;
     }
 
-    public void setReadingStrength(int level, CallbackContext callbackContext) {
+    public void setReadingStrength(CallbackContext callbackContext, int level) {
 
         try {
             if (level >= 0 && level <= 19) {
@@ -60,5 +67,15 @@ public class NordicID extends CordovaPlugin {
         } catch (Exception e) {
             callbackContext.error(e.toString());
         }
+    }
+
+    private void connectViaTCP(CallbackContext callbackContext, String hostname) {
+        try {
+            autoConnect.setAddress(hostname);
+            callbackContext.success("Conenction started");
+        } catch(Exception e) {
+            callbackContext.error(e.toString());
+        }
+
     }
 }
