@@ -12,9 +12,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**
- * This class echoes a string called from JavaScript.
- */
+
 public class NordicID extends CordovaPlugin {
     private NurApi nurApi;
     private NurApiSocketAutoConnect autoConnect;

@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab78c7b6-7f32-4c1b-b01c-94e8826250f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/android/NurApiAutoConnectTransport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/android/NurApiSocketAutoConnect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/android/NurApiSocketTransport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/android/NordicID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/NordicID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/android/libs/NurApi.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/android/libs/NurApi.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/NordicID.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/NordicID.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/android/NordicID.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="42" column="57" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+            <state relative-caret-position="255">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -427,8 +420,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/NordicID.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="42" column="57" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
