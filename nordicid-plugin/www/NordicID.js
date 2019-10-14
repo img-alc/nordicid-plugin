@@ -8,7 +8,7 @@ exports.getReadingStrength = function (success, error) {
     exec(success, error, 'NordicID', 'getReadingStrength', null);
 };
 
-exports.setReadingStrength = function (success, error, hostname) {
+exports.connectToDevice = function (success, error, hostname) {
     exec(success, error, 'NordicID', 'connectViaTCP', hostname);
 };
 
